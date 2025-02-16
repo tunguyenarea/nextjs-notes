@@ -91,8 +91,8 @@ export async function editNote(note_id: string, prevState: State, formData: Form
   }
 
   revalidatePath('/', 'layout');
-  //redirect(`/home/${note_id}`);
-  redirect('/home');
+  redirect(`/home/${note_id}`);
+  //redirect('/home');
 }
 
 export async function deleteNote(note_id: string) {
