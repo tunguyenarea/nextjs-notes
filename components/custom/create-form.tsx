@@ -14,7 +14,7 @@ function Submit() {
   );
 }
 
-export default function CreateForm({ author_id }: { author_id: string }) {
+export default function CreateForm({ author_id }: { author_id: string | undefined }) {
   const initialState: State = { message: null, errors: {} };
   const [state, formAction] = useActionState(createNote, initialState);
 
@@ -25,7 +25,7 @@ export default function CreateForm({ author_id }: { author_id: string }) {
     <form action={formAction}>
       <div className="my-6">
         <label className="text-xl bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text font-bold text-transparent">Title</label>
-          <input name="title" placeholder="Title..." className="rounded-lg w-full border-2 p-2" required></input>
+        <input name="title" placeholder="Title..." className="rounded-lg w-full border-2 p-2" required></input>
       </div>
       <div>
         <input name="author_id" type="hidden" defaultValue={author_id} className=""></input>

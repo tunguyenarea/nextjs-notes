@@ -1,14 +1,11 @@
-import Link from 'next/link';
 import styles from '@/app/modules/note.module.css';
 
 export function EachNote({
   noteTitle,
   noteContent,
-  className,
 }: {
   noteTitle?: string;
   noteContent?: string;
-  className?: string;
 }) {
   return (
   <>
