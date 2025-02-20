@@ -25,17 +25,17 @@ export function AuthForm({ action, children, defaultEmail = '', isSuccessful, ur
   return (
   <>
 
-  <section className="grid h-dvh place-content-center bg-neutral-200 md:bg-white">
+  <section className="grid h-dvh place-content-center bg-neutral-200 md:bg-white dark:bg-black">
     <Form action={action}>
-      <div className="rounded-lg bg-neutral-200">
+      <div className="rounded-lg bg-neutral-200 dark:bg-neutral-900">
         {children}
       <div className="p-6 w-dvw md:w-auto flex flex-col gap-3">
 
           <label htmlFor="email" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent w-fit">Email</label>
-          <input id="email" name="email" type="email" className="rounded-lg p-3 bg-white" defaultValue={defaultEmail} placeholder="user@email.com" autoComplete="email" required></input>
+          <input id="email" name="email" type="email" className="rounded-lg p-3 bg-white dark:bg-black" defaultValue={defaultEmail} placeholder="user@email.com" autoComplete="email" required></input>
 
           <label htmlFor="password" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent w-fit">Password</label>
-          <input id="password" name="password" type="password" className="rounded-lg p-3 bg-white" placeholder="password" required></input>
+          <input id="password" name="password" type="password" className="rounded-lg p-3 bg-white dark:bg-black" placeholder="password" required></input>
 
       </div>
       <div className="px-6">

@@ -2,7 +2,6 @@
 
 import { neon } from "@neondatabase/serverless";
 import { genSaltSync, hashSync } from 'bcrypt-ts';
-import { User, Note } from '@/app/lib/definitions';
 
 const sql = neon(process.env.DATABASE_URL!);
 
